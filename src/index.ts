@@ -7,6 +7,7 @@ import { jsonLetterCity } from "./write/json_letter_city"
 import { jsonPc } from "./write/json_pc"
 import { jsonPca } from "./write/json_pca"
 import { jsonProvince } from "./write/json_province"
+import { jsonProvinceCity } from "./write/json_province_city"
 
 async function main() {
   let url = "https://restapi.amap.com/v3/config/district"
@@ -65,6 +66,7 @@ async function main() {
   jsonArea(items)
 
   jsonAll(items)
+  jsonProvinceCity(items)
 
   jsonPc(items)
   jsonPca(items)
