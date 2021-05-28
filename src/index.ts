@@ -55,6 +55,11 @@ async function main() {
     }
   }
 
+  /** 排除香港、台湾、澳门 */
+  const exclude = ["810000", "710000", "820000"]
+
+  items = items.filter((it) => exclude.indexOf(it.code) === -1)
+
   jsonProvince(items)
   jsonCity(items)
   jsonArea(items)
