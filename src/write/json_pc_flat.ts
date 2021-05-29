@@ -1,9 +1,9 @@
 import { Item } from "../type"
 import { writeToJson } from "../util"
 
-export function jsonProvinceCity(items: Item[]) {
+export function jsonPcFlat(items: Item[]) {
   writeToJson(
-    "province_city.json",
+    "pc_flat.json",
     items
       .filter((it) => it.level !== "area")
       .map((it) => {

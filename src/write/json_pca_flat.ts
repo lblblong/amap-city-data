@@ -1,9 +1,9 @@
 import { Item } from "../type"
 import { writeToJson } from "../util"
 
-export function jsonAll(items: Item[]) {
+export function jsonPcaFlat(items: Item[]) {
   writeToJson(
-    "all.json",
+    "pca_flat.json",
     items.map((it) => {
       const result = {
         name: it.name,

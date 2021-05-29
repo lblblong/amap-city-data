@@ -1,13 +1,13 @@
 import axios from "axios"
 import { Item } from "./type"
-import { jsonAll } from "./write/json_all"
 import { jsonArea } from "./write/json_area"
 import { jsonCity } from "./write/json_city"
 import { jsonLetterCity } from "./write/json_letter_city"
-import { jsonPc } from "./write/json_pc"
-import { jsonPca } from "./write/json_pca"
+import { jsonPcaCascode } from "./write/json_pca_cascode"
+import { jsonPcaFlat } from "./write/json_pca_flat"
+import { jsonPcCascode } from "./write/json_pc_cascade"
+import { jsonPcFlat } from "./write/json_pc_flat"
 import { jsonProvince } from "./write/json_province"
-import { jsonProvinceCity } from "./write/json_province_city"
 
 async function main() {
   let url = "https://restapi.amap.com/v3/config/district"
@@ -65,11 +65,11 @@ async function main() {
   jsonCity(items)
   jsonArea(items)
 
-  jsonAll(items)
-  jsonProvinceCity(items)
+  jsonPcaFlat(items)
+  jsonPcaCascode(items)
 
-  jsonPc(items)
-  jsonPca(items)
+  jsonPcFlat(items)
+  jsonPcCascode(items)
 
   jsonLetterCity(items)
 

@@ -1,7 +1,7 @@
 import { Item } from "../type"
 import { writeToJson } from "../util"
 
-export function jsonPc(items: Item[]) {
+export function jsonPcaCascode(items: Item[]) {
   const provinces = items
     .filter((p) => p.level === "province")
     .map((p) => {
@@ -14,10 +14,18 @@ export function jsonPc(items: Item[]) {
             return {
               code: c.code,
               name: c.name,
+              children: items
+                .filter((a) => a.level === "area" && a.city_code === c.code)
+                .map((a) => {
+                  return {
+                    code: a.code,
+                    name: a.name,
+                  }
+                }),
             }
           }),
       }
     })
 
-  writeToJson("pc.json", provinces)
+  writeToJson("pca_cascode.json", provinces)
 }
