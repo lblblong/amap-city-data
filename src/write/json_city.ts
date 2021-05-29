@@ -10,7 +10,6 @@ export function jsonCity(items: Item[]) {
         return {
           name: it.name,
           code: it.code,
-          center: it.center,
           province_code: it.province_code,
         }
       })

@@ -31,7 +31,6 @@ async function main() {
     items.push({
       code: p.adcode,
       name: p.name,
-      center: p.center,
       level: "province",
       country_code: data.districts[0].adcode,
     })
@@ -39,7 +38,6 @@ async function main() {
       items.push({
         code: c.adcode,
         name: c.name,
-        center: c.center,
         level: "city",
         province_code: p.adcode,
       })
@@ -47,7 +45,6 @@ async function main() {
         items.push({
           code: d.adcode,
           name: d.name,
-          center: d.center,
           level: "area",
           province_code: p.adcode,
           city_code: c.adcode,

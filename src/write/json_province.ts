@@ -10,7 +10,6 @@ export function jsonProvince(items: Item[]) {
         return {
           name: it.name,
           code: it.code,
-          center: it.center,
         }
       })
   )

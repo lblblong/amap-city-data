@@ -11,7 +11,6 @@ export function jsonPcFlat(items: Item[]) {
           name: it.name,
           code: it.code,
           level: it.level,
-          center: it.center,
           parent_code: "",
         }
 

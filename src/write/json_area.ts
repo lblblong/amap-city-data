@@ -10,7 +10,6 @@ export function jsonArea(items: Item[]) {
         return {
           name: it.name,
           code: it.code,
-          center: it.center,
           city_code: it.city_code,
           province_code: it.province_code,
         }
